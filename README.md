@@ -27,7 +27,7 @@ easygui at least version 0.98
 sudo python3 -m pip install --upgrade easygui  
 ```  
 
-## How to launch the game :  
+## How to launch the software ? :  
 
 
 ```sh
