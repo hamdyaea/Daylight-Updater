@@ -11,6 +11,8 @@ DaylightUpdater allow you to update, upgrade, clean, etc. any "Debian-based" Lin
 ## How it work ?:  
 
 You must be root or become root.  
+Then click on the button to start the update, upgrade etc...  
+You can do everything from the gui.
 
 
 ## What you need to make it work :  
