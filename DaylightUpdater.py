@@ -8,30 +8,30 @@ image = "./images/update.gif"
 
 def su():
     startUpdate()
-    os.system("sudo su")
+    os.system("sudo -i su")
 
 def everything():
-    os.system("apt-get -y update && sudo apt-get -y upgrade && sudo apt-get -y dist-upgrade && sudo apt-get -y autoremove ")
+    os.system("sudo -i apt-get -y update && sudo -i apt-get -y upgrade && sudo -i apt-get -y dist-upgrade && sudo -i apt-get -y autoremove ")
     startUpdate()
 
 def autoremove():
-    os.system("apt-get -y autoremove")
+    os.system("sudo -i apt-get -y autoremove")
     startUpdate()
 
 def autoclean():
-    os.system("apt-get -y autoclean")
+    os.system("sudo -i apt-get -y autoclean")
     startUpdate()
 
 def update():
-    os.system("apt-get -y update")
+    os.system("sudo -i apt-get -y update")
     startUpdate()
 
 def upgrade():
-    os.system("apt-get -y upgrade")
+    os.system("sudo -i apt-get -y upgrade")
     startUpdate()
 
 def distUpgrade():
-    os.system("apt-get -y dist-upgrade")
+    os.system("sudo -i apt-get -y dist-upgrade")
     startUpdate()
 
 def startUpdate():
