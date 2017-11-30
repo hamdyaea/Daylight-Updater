@@ -31,7 +31,7 @@ sudo python3 -m pip install --upgrade easygui
 
 
 ```sh
-python3 DaylightUpdater.py
+sudo -i python3 DaylightUpdater.py
 ```
 
 
