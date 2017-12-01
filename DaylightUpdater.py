@@ -6,9 +6,9 @@ import os
 
 image = "./images/update.gif"
 
-def su():
-    startUpdate()
-    os.system("sudo -i su")
+#def su():
+#    os.system("sudo -i su")
+#    startUpdate()
 
 def everything():
     os.system("sudo -i apt-get -y update && sudo -i apt-get -y upgrade && sudo -i apt-get -y dist-upgrade && sudo -i apt-get -y autoremove ")
@@ -38,7 +38,7 @@ def startUpdate():
     img= image
     title= "DaylightUpdater"
     msg = "This software only work as root or with a sudoer user.\n\nClick on Become Root and enter the Root password in the terminal if asked.\n\nWhat do you want to do ?"
-    choices = ["Become Root","Everything in one time","1 Update", "2 Upgrade", "3 Dist-upgrade", "4 Autoclean", "5 Autoremove", "6 Exit"]
+    choices = ["Everything in one time","1 Update", "2 Upgrade", "3 Dist-upgrade", "4 Autoclean", "5 Autoremove", "6 Exit"]
     reply = buttonbox(msg,image=img,choices=choices)
     if reply == "1 Update":
         update()
@@ -55,8 +55,8 @@ def startUpdate():
         sys.exit(0)
     elif reply == "Everything in one time":
         everything()
-    elif reply == "Become Root":
-        su()
+  #  elif reply == "Become Root":
+   #     su()
     else:
         sys.exit(0)
 
