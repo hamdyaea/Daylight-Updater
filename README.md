@@ -1,42 +1,18 @@
-# DaylightUpdater
+# Daylight Updater
 
-## What's this software ?
+**Developer:** Hamdy Abou El Anein  
+**Contact:** info@daylightlinux.ch  
+**License:** GPL v3 (see LICENSE).
 
-DaylightUpdater allow you to update, upgrade, clean, etc. any "Debian-based" Linux with a gui.
-
-
-![Screenshot](screenshot.png)
-
-
-## How it work ?:  
-
-You must be root or become root.  
-Then click on the button to start the update, upgrade etc...  
-You can do everything from the gui.
-
-
-## What you need to make it work :  
-
-This game is made for Python 3.  
-
-Install all the packages for : Python 3.  
-
-easygui at least version 0.98  
+A Python 3 maintenance GUI and CLI for Debian-based systems. The new version defaults to a **non-destructive preview** and does not automatically chain upgrades, full upgrades, or autoremove.
 
 ```sh
-sudo python3 -m pip install --upgrade easygui  
-```  
-
-## How to launch the software ? :  
-
-
-```sh
-sudo -i python3 DaylightUpdater.py
+python3 DaylightUpdater.py
+python3 DaylightUpdater.py upgrade
+python3 DaylightUpdater.py upgrade --apply
+python3 -m unittest discover -s tests -v
 ```
 
+Actual changes require root privileges and explicit confirmation. The `--yes` option is intended for deliberately automated administration only. The GUI requires Tkinter. **Do not run on Arch/Manjaro/CachyOS**: it targets APT only. Never use a production server as a test target.
 
-## Developer - Author  
-
-
-Hamdy Abou El Anein
-
+The historical version is preserved on the [old branch](https://github.com/hamdyaea/Daylight-Updater/tree/old).
