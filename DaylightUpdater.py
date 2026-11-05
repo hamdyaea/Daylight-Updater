@@ -1,3 +1,4 @@
+from pathlib import Path
 #!/usr/bin/env python3
 # Developer: Hamdy Abou El Anein
 # Contact: info@daylightlinux.ch
@@ -60,8 +61,11 @@ def gui() -> int:
     from tkinter import messagebox
     root = tk.Tk()
     root.title("Daylight Updater — preview first")
-    root.geometry("470x300")
     action = tk.StringVar(value="upgrade")
+    artwork = tk.PhotoImage(file=str(Path(__file__).resolve().parent / "images/update-ui.png"))
+    illustration = tk.Label(root, image=artwork)
+    illustration.image = artwork
+    illustration.pack()
     tk.Label(root, text="Choose an action. Preview is the default.").pack(pady=10)
     for item in ACTIONS:
         tk.Radiobutton(root, text=item, variable=action, value=item).pack(anchor="w", padx=40)
